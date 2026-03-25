@@ -1,25 +1,24 @@
 public class Hello {
     public static void main(String[] args) {
 
-        // If names are provided
+        // If arguments are provided
         if (args.length > 0) {
 
-            System.out.print("Hello ");
+            String result = "Hello ";
 
-            for (int i = 0; i < args.length; i++) {
-                System.out.print(args[i]);
-
-                // Add space between names
-                if (i < args.length - 1) {
-                    System.out.print(" ");
-                }
+            // Enhanced for loop
+            for (String name : args) {
+                result += name + " ";
             }
 
-            System.out.println();
+            // Remove trailing space using substring
+            result = result.substring(0, result.length() - 1);
+
+            System.out.println(result);
         } 
         // Default case
         else {
-            System.out.println("Hello World");
+            System.out.println("Hello, World!");
         }
 
     }
