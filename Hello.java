@@ -1,25 +1,15 @@
 public class Hello {
     public static void main(String[] args) {
 
-        // If names are provided
+        // If arguments are provided
         if (args.length > 0) {
-
-            System.out.print("Hello ");
-
-            for (int i = 0; i < args.length; i++) {
-                System.out.print(args[i]);
-
-                // Add space between names
-                if (i < args.length - 1) {
-                    System.out.print(" ");
-                }
-            }
-
-            System.out.println();
+            // Join all arguments with space
+            String result = String.join(" ", args);
+            System.out.println("Hello " + result);
         } 
         // Default case
         else {
-            System.out.println("Hello World");
+            System.out.println("Hello, World!");
         }
 
     }
